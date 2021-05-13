@@ -44,7 +44,7 @@
 </details>
 
 <details>
- <summary>Use in-built methods as much as possible.</summary>
+ <summary>Use built-in methods as much as possible.</summary>
  <p>
  sort()
  reduce()
@@ -96,7 +96,7 @@
 ## Loops
 
 <details>
- <summary>Replace <code>range()</code> with `xrange()`.</summary>
+ <summary>Replace <code>range()</code> with <code>xrange()</code>.</summary>
  <p>
  `range()` loads all the numbers in memory, whereas `xrange()` returns a generator that lazily loads the next number when needed.
    ```python
@@ -107,7 +107,7 @@
 </details>
 
 <details>
- <summary>Use map() instead of loops.</summary>
+ <summary>Use <code>map()</code> instead of loops.</summary>
  <p>
   To use c compiled code instead of interpreted code.
  </p>
@@ -120,7 +120,7 @@
 </details>
 
 <details>
- <summary>Use local variables for loops instead of referring to Global variables.</summary>
+ <summary>Use local variables for loops instead of referring to global variables.</summary>
  <p>
  </p>
 </details>
@@ -142,7 +142,7 @@
 </details>
 
 <details>
- <summary>Initializing dict values, use get() with default value.</summary>
+ <summary>Initializing dict values, use <code>get()</code> with default value.</summary>
  <p>
  </p>
 </details>
@@ -156,7 +156,7 @@
 ## Strings
 
 <details>
- <summary>Use `join()` for string concatenation instead of `+`.</summary>
+ <summary>Use <code>join()</code> for string concatenation instead of <code>+</code>.</summary>
  <p>
  </p>
 </details>
@@ -164,7 +164,7 @@
 ## Conditions
 
 <details>
- <summary>Use `in`.</summary>
+ <summary>Use <code>in</code>.</summary>
  <p>
  </p>
 </details>
