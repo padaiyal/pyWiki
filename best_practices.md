@@ -1,4 +1,4 @@
- # Best practices
+ # Python development - Best practices
  This page highlights a list of best practices while programming in python.
  
  <!-- TABLE OF CONTENTS -->
@@ -24,16 +24,37 @@
 </details>
 
 ## General
-### a. Import modules only when needed.  
-### b. Fail fast.
-### c. Cache functions via decorator.
-### d. Use in-built methods as much as possible
+
+<details>
+ <summary>Import modules only when needed.</summary>
+ <p>
+ </p>
+</details>
+
+<details>
+ <summary>Fail fast.</summary>
+ <p>
+ </p>
+</details>
+
+<details>
+ <summary>Cache functions via decorator.</summary>
+ <p>
+ </p>
+</details>
+
+<details>
+ <summary>Use in-built methods as much as possible.</summary>
+ <p>
  sort()
  reduce()
  map()
  etc
+ </p>
+</details>
 
-<details><summary>Reduce function calls.</summary>
+<details>
+ <summary>Reduce function calls.</summary>
  <p>
   
  ```python
@@ -66,39 +87,100 @@
  </p>
  </details>
 
-### f. Profile application. Especially after changing code.
+<details>
+ <summary>Profile application. Especially after changing code.</summary>
+ <p>
+ </p>
+</details>
 
 ## Loops
-### a. Replace `range()` with `xrange()`.
+
+<details>
+ <summary>Replace <code>range()</code> with `xrange()`.</summary>
+ <p>
  `range()` loads all the numbers in memory, whereas `xrange()` returns a generator that lazily loads the next number when needed.
    ```python
    lol = 1243
    pop = 1323
    ```
-### b. Use map() instead of loops
-To use c compiled code instead of interpreted code.
-### c. Avoiding dots in loops i.e member resolution.
-### d. Use local variables for loops instead of referring to Global variables.
-### e. Use list comprehension instead of loops.
+ </p>
+</details>
+
+<details>
+ <summary>Use map() instead of loops.</summary>
+ <p>
+  To use c compiled code instead of interpreted code.
+ </p>
+</details>
+
+<details>
+ <summary>Avoiding dots in loops i.e member resolution.</summary>
+ <p>
+ </p>
+</details>
+
+<details>
+ <summary>Use local variables for loops instead of referring to Global variables.</summary>
+ <p>
+ </p>
+</details>
+
+<details>
+ <summary>Use list comprehension instead of loops.</summary>
+ <p>
+ </p>
+</details>
 
 ## Collections
-### a. While generating data, consider using generators as opposed to collections.
-As when using a collection like a list or set, all the elements need to be generated and stored in memory.
-Whereas, a generator lazily generates elements only when the iteration needs it.
-### b. Initializing dict values, use get() with default value.
-### c. Use sets when intersections and unions are needed.
+
+<details>
+ <summary>While generating data, consider using generators as opposed to collections.</summary>
+ <p>
+  As when using a collection like a list or set, all the elements need to be generated and stored in memory.
+  Whereas, a generator lazily generates elements only when the iteration needs it
+ </p>
+</details>
+
+<details>
+ <summary>Initializing dict values, use get() with default value.</summary>
+ <p>
+ </p>
+</details>
+
+<details>
+ <summary>Use sets when intersections and unions are needed.</summary>
+ <p>
+ </p>
+</details>
 
 ## Strings
-### a. Use `join()` for string concatenation instead of `+`. 
+
+<details>
+ <summary>Use `join()` for string concatenation instead of `+`.</summary>
+ <p>
+ </p>
+</details>
 
 ## Conditions
-### a. Use `in`.  
-### b. Prefer checking a long list as opposed to constructing a set.
- ```
- if animal in set(animals):
- 
- if animal in animals:
- ```
+
+<details>
+ <summary>Use `in`.</summary>
+ <p>
+ </p>
+</details>
+
+<details>
+ <summary>Prefer checking a long list as opposed to constructing a set.</summary>
+ <p>
+  
+   ```python
+   if animal in set(animals):
+
+   if animal in animals:
+   ```
+ </p>
+</details>
+
 
 ## References
 [1] https://stackify.com/20-simple-python-performance-tuning-tips/ <br>
