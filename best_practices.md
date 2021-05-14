@@ -128,6 +128,21 @@
 <details>
  <summary>Use list comprehension instead of loops.</summary>
  <p>
+  
+  
+  ```python
+   @time_it
+   def square_numbers_using_for_loop(numbers: list) -> list:
+       squared_numbers = list()
+       for number in numbers:
+           squared_numbers.append(number * number)
+           return squared_numbers
+
+
+   @time_it
+   def square_numbers_using_list_comprehension(numbers: list) -> list:
+       return [number * number for number in numbers]
+   ```
  </p>
 </details>
 
