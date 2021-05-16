@@ -90,6 +90,20 @@
 <details>
  <summary>Profile application. Especially after changing code.</summary>
  <p>
+  
+  ```bash
+  $ python3.9 -m cProfile wiki/general/import_modules.py | awk 'NR<8 || /import_modules/'
+  Check for a standard function call: 235.19015312194824 ms
+  Check for a standard function call: 0.0026226043701171875 ms
+         155065 function calls (149795 primitive calls) in 0.235 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.236    0.236 import_modules.py:1(<module>)
+        2    0.000    0.000    0.235    0.118 import_modules.py:9(import_check)
+
+  ```
  </p>
 </details>
 
