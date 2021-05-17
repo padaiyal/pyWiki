@@ -3,7 +3,7 @@ from wiki.utils.time_it import time_it_in_milliseconds
 
 @time_it_in_milliseconds
 def convert_years_to_months_fail_late(years: int) -> int:
-    if years >= 0:
+    if years > -1:
         return years * 12
     else:
         raise Exception("Years has to be a positive value.")

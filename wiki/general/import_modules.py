@@ -13,5 +13,5 @@ def import_check():
 
 
 if __name__ == '__main__':
-    print(f"Check for a standard function call: {import_check()} ms")
-    print(f"Check for a standard function call: {import_check()} ms")
+    print(f"Check for a standard function call: {standard_check()} ms")
+    print(f"Check for a import call: {import_check()} ms")

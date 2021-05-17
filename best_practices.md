@@ -1,6 +1,10 @@
  # Python development - Best practices
  This page highlights a list of best practices while programming in python.
  
+ - The metrics illustrated in the examples should be taken with a pinch of salt as it doesn't
+ exclude thread sleep time.
+ - This is fragment of my experience and not a comprehensive guide.
+ 
  <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
