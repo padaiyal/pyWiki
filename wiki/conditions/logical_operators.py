@@ -1,4 +1,4 @@
-# AND - &, OR, SHORT CIRCUIT - && AND, SHORT CIRCUIT OR, XOR, NOT
+# AND (&), OR (|), SHORT CIRCUIT AND (&&), SHORT CIRCUIT OR (||), XOR (^), NOT (!)
 import time
 
 # AND/OR - Evaluates both conditions
@@ -16,7 +16,7 @@ def delete_even_numbers(input_list: list):
     # return [number for number in input_list if number % 2 != 0]
 
 
-list1 = [1, 2, 3, 4, 5]
+list1 = [1, 2, 2, 3, 4, 5]
 delete_even_numbers(list1)
 print(list1)
 
@@ -49,9 +49,18 @@ if list1 is not None:
 if list1[0] != 10:
     print("First value in list is not 10.")
 
-# Try the short circuit & normal OR operators.
+if not(list1[0] % 2 == 0):
+    print("First number is not even")
 
+if ~(list1[0] % 2 == 0):
+    print("First number is not even")
+
+# TODO: Try the short circuit (|) & normal OR operators.
+
+
+# Exclusive OR - Only one condition has to be true
 condition1 = False
-condition2 = False
-if condition1 ^ condition2: # (condition1 and not condition2) or (not condition1 and condition2)
+condition2 = True
+if condition1 ^ condition2:
+    # (condition1 and not condition2) or (not condition1 and condition2)
     print("Only one condition is true.")
