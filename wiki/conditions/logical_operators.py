@@ -57,6 +57,13 @@ if ~(list1[0] % 2 == 0):
 
 # TODO: Try the short circuit (|) & normal OR operators.
 
+#this "or" evaluates both condition even if the firs is true 
+if heavy_condition() | light_condition():
+    print("Only one condition is satified")
+
+#this "or" evaluates the second condition only when necessary
+if heavy_condition() or light_condition():
+    print("Only one condition is satified")
 
 # Exclusive OR - Only one condition has to be true
 condition1 = False
