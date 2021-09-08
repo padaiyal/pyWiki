@@ -1,6 +1,4 @@
 # for loop
-import collections
-
 for index in range(1, 10, 2):
     print(index)
 
@@ -31,15 +29,3 @@ print(dict1)
 print(even_number_squares)
 print(tuple1)
 
-
-def even_numbers() -> collections.Iterable:
-    number = 1
-    while True:
-        if number % 2 == 0:
-            yield number
-        number += 1
-
-
-# Be careful! Infinite loop detected.
-for even_number in even_numbers():
-    print(even_number)
