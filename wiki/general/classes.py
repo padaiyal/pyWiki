@@ -10,6 +10,10 @@ class Car:
         self.__engine_on: bool = False
         self.__speed_in_kmph: float = 0
 
+    @staticmethod
+    def get_type() -> str:
+        return "Car"
+
     def set_engine_on(self, engine_on: bool) -> None:
         """
         Set the state of the engine.
@@ -43,6 +47,7 @@ class Car:
 
 
 car1: Car = Car()
+print(Car.get_type())
 print(car1.get_engine_on())
 print(car1.get_speed_in_kmph())
 
@@ -61,5 +66,5 @@ print(car2.get_speed_in_kmph())
 time.sleep(1)
 """
 TODO: Add functionality to brake. Braking reduces the speed by 5kmph per second. Two brake methods. 
-One to got to desired speed. Another to brake for specified duration.
+One to get to the desired speed. Another to brake for specified duration.
 """
