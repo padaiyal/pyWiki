@@ -45,7 +45,7 @@
 12. [Iterators](wiki/loops/iterator.py)
 13. [Modules](wiki/packages_and_modules/modules.py)
 14. [Packages](wiki/packages_and_modules/import.py)
-15. Inheritance
+15. [Inheritance](wiki/inheritance)
 16. Design patterns
     - Singleton
     - Decorator
