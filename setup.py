@@ -1,5 +1,6 @@
 from setuptools import setup
 
+# The comman used to install the dependencies from a setup.py file: pip install .
 setup(
     name='pyWiki',
     version='',
@@ -9,5 +10,5 @@ setup(
     author='Ranjan Mohan',
     author_email='',
     description='',
-    install_requires=['matplotlib']
+    install_requires=['matplotlib>=3.4.3']
 )
