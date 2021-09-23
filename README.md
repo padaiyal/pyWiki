@@ -46,13 +46,15 @@
 13. [Modules](wiki/packages_and_modules/modules.py)
 14. [Packages](wiki/packages_and_modules/import.py)
 15. [Inheritance](wiki/inheritance)
-16. [Design patterns](wiki/design_patterns)
+16. Errors & Exception
+17. [Design patterns](wiki/design_patterns)
     - [Singleton](wiki/design_patterns/singleton.py)
     - [Decorator](wiki/design_patterns/decorator.py)
-17. Unit tests
-18. [setup.py](setup.py)/[requirements.txt](requirements.txt)
-19. Python virtual environments
-20. GitHub actions
+18. Threads
+19. Unit tests
+20. [setup.py](setup.py)/[requirements.txt](requirements.txt)
+21. Python virtual environments
+22. GitHub actions
 
 
 [contributors-shield]: https://img.shields.io/github/contributors/pyPadaiyal/wiki.svg?style=for-the-badge
