@@ -51,7 +51,7 @@
     - [Singleton](wiki/design_patterns/singleton.py)
     - [Decorator](wiki/design_patterns/decorator.py)
 18. Threads
-19. Unit tests
+19. [Unit tests](wiki/unit_tests)
 20. [setup.py](setup.py)/[requirements.txt](requirements.txt)
 21. Python virtual environments
 22. GitHub actions
