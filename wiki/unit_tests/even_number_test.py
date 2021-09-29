@@ -1,7 +1,7 @@
 import unittest
 from typing import Callable, Any
 
-from wiki.unittests import even_numbers
+from wiki.unit_tests import even_numbers
 
 
 class EvenNumberTest(unittest.TestCase):
