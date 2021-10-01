@@ -53,7 +53,7 @@
 18. Threads
 19. [Unit tests](wiki/unit_tests)
 20. [setup.py](setup.py)/[requirements.txt](requirements.txt)
-21. Python virtual environments
+21. [Python virtual environments](https://docs.python.org/3/tutorial/venv.html)
 22. GitHub actions
 
 
