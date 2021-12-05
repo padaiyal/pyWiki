@@ -10,5 +10,5 @@ setup(
     author='Ranjan Mohan',
     author_email='',
     description='',
-    install_requires=['matplotlib>=3.4.3']
+    install_requires=['matplotlib>=3.4.3', 'flask', 'PyJWT', 'tornado']
 )
