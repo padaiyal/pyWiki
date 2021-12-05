@@ -25,12 +25,15 @@
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#tutorial">Tutorial</a></li>
+    <li><a href="#learn_to_walk">Learn to walk</a></li>
+    <li><a href="#learn_to_jog">Learn to jog</a></li>
+    <li><a href="#learn_to_run">Learn to run</a></li>
+    <li><a href="#learn_to_defend">Learn to defend</a></li>
     <li><a href="best_practices.md">Best practices</a></li>
   </ol>
 </details>
 
-## Tutorial
+## Learn to walk
 1. [Data types](wiki/datatypes/datatypes.py)
 2. [Conditional statements](wiki/conditions)
 3. [Loops](wiki/loops/loops.py)
@@ -47,15 +50,68 @@
 14. [Packages](wiki/packages_and_modules/import.py)
 15. [Inheritance](wiki/inheritance)
 16. Errors & Exception
-17. [Design patterns](wiki/design_patterns)
-    - [Singleton](wiki/design_patterns/singleton.py)
-    - [Decorator](wiki/design_patterns/decorator.py)
-18. Threads
-19. [Unit tests](wiki/unit_tests)
-20. [setup.py](setup.py)/[requirements.txt](requirements.txt)
-21. [Python virtual environments](https://docs.python.org/3/tutorial/venv.html)
-22. GitHub actions
+17. Threads
+18. [Unit tests](wiki/unit_tests)
+19. [setup.py](setup.py)/[requirements.txt](requirements.txt)
+20. [Python virtual environments](https://docs.python.org/3/tutorial/venv.html)
+21. GitHub actions
 
+## Learn to jog
+1. Data formats
+   - csv
+   - json
+   - xml
+2. API
+   - SOAP
+   - REST
+     - Flask
+     - Tornado
+3. Web servers
+   - flask
+   - [tornado](wiki/rest/tornado.py)
+4. ORM
+   - sqlalchemy
+5. numPy
+6. pandas
+
+## Learn to run
+1. [Design patterns](wiki/design_patterns)
+    - Creational
+      - [Singleton](wiki/design_patterns/singleton.py)
+      - Abstract factory
+      - Builder
+      - Factory method
+      - Object pool
+      - Prototype
+    - Structural
+      - Adapter
+      - Bridge
+      - Composite
+      - Facade
+      - Flyweight
+      - Private Class Data
+      - Proxy
+      - [Decorator](wiki/design_patterns/decorator.py)
+    - Behavioural
+      - Chain of responsibility
+      - Command
+      - Interpreter
+      - Iterator
+      - Mediator
+      - Memento
+      - Null object
+      - Observer
+      - State
+      - Template method
+      - Visitor
+
+## Learn to defend
+1. Authentication
+   - SAML
+   - OAuth
+   - LDAP
+2. Authorization
+   - [JWT](wiki/security/authorization/jwt_sample.py)
 
 [contributors-shield]: https://img.shields.io/github/contributors/pyPadaiyal/wiki.svg?style=for-the-badge
 [contributors-url]: https://github.com/pyPadaiyal/wiki/graphs/contributors
