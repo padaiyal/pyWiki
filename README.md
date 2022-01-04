@@ -44,17 +44,18 @@
 8. [Lambda functions](wiki/general/lambdas.py)
 9. [Map, Reduce and Filter](wiki/general/map_filter_reduce.py)
 10. [Classes](wiki/general/classes.py)
-11. [Generators](wiki/loops/generator.py)
-12. [Iterators](wiki/loops/iterator.py)
-13. [Modules](wiki/packages_and_modules/modules.py)
-14. [Packages](wiki/packages_and_modules/import.py)
-15. [Inheritance](wiki/inheritance)
-16. Errors & Exception
-17. Threads
-18. [Unit tests](wiki/unit_tests)
-19. [setup.py](setup.py)/[requirements.txt](requirements.txt)
-20. [Python virtual environments](https://docs.python.org/3/tutorial/venv.html)
-21. GitHub actions
+11. [Type class and method](wiki/general/type_class_and_method.py)
+12. [Generators](wiki/loops/generator.py)
+13. [Iterators](wiki/loops/iterator.py)
+14. [Modules](wiki/packages_and_modules/modules.py)
+15. [Packages](wiki/packages_and_modules/import.py)
+16. [Inheritance](wiki/inheritance)
+17. Errors & Exception
+18. Threads
+19. [Unit tests](wiki/unit_tests)
+20. [setup.py](setup.py)/[requirements.txt](requirements.txt)
+21. [Python virtual environments](https://docs.python.org/3/tutorial/venv.html)
+22. GitHub actions
 
 ## Learn to jog
 1. Data formats
@@ -75,7 +76,8 @@
 6. pandas
 
 ## Learn to run
-1. [Design patterns](wiki/design_patterns)
+1. [Metaclass](wiki/metaclasses)
+2. [Design patterns](wiki/design_patterns)
     - Creational
       - [Singleton](wiki/design_patterns/singleton.py)
       - Abstract factory
