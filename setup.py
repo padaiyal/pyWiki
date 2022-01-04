@@ -1,9 +1,9 @@
 from setuptools import setup
 
-# The comman used to install the dependencies from a setup.py file: pip install .
+# The command used to install the dependencies from a setup.py file: "pip install ."
 setup(
     name='pyWiki',
-    version='',
+    version='2022.01.03',
     packages=['wiki', 'wiki.loops'],
     url='https://github.com/pyPadaiyal/pyWiki',
     license='',
