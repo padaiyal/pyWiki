@@ -15,3 +15,4 @@ def import_check():
 if __name__ == '__main__':
     print(f"Check for a standard function call: {standard_check()} ms")
     print(f"Check for a import call: {import_check()} ms")
+    # Importing modules are expensive, so in some cases pushing it until when it's needed may help with startup time.

@@ -33,11 +33,13 @@ def light_condition() -> bool:
     return False
 
 
+print("Testing 'and'.")
 if light_condition() and heavy_condition():
     print("Both conditions have been satisfied.")
 else:
     print("Both conditions haven't been satisfied.")
 
+print("Testing '&'.")
 if light_condition() & heavy_condition():
     print("Both conditions have been satisfied.")
 else:

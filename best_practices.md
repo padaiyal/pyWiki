@@ -7,214 +7,79 @@
  
  <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table of Contents</summary>
+  Table of Contents
   <ol>
-    <li>
-      <a href="#general">General</a>
-    </li>
-    <li>
-      <a href="#loops">Loops</a>
-    </li>
-    <li>
-        <a href="#collections">Collections</a>
-    </li>
-    <li>
-        <a href="#strings">Strings</a>
-    </li>
-    <li>
-        <a href="#conditions">Conditions</a>
-    </li>
+     <li> <a href="#general">General</a> </li>
+     <li> <a href="#loops">Loops</a> </li>
+     <li> <a href="#collections">Collections</a> </li>
+     <li> <a href="#strings">Strings</a> </li>
+     <li> <a href="#conditions">Conditions</a> </li>
   </ol>
 </details>
 
 ## General
+ - <a href="wiki/general/fail_fast.py">Fail fast.</a>
 
-<details>
- <summary>Import modules only when needed.</summary>
- <p>
- </p>
-</details>
+ - <a href="wiki/general/lru_cache.py">Cache functions via decorator.</a>
 
-<details>
- <summary>Fail fast.</summary>
- <p>
- </p>
-</details>
+ - Prefer built-in methods and keywords unless performance gain is worth the effort. Eg: <code>sort()</code>,
+ <code>reduce()</code>,
+ <code>map()</code>
+ etc.
 
-<details>
- <summary>Cache functions via decorator.</summary>
- <p>
- </p>
-</details>
+ - After code changes:
+    - <details>Run unit tests.</details>
+    - Test code coverage.
+    - Profile application performance before and after the change.
+      <p>
 
-<details>
- <summary>Use built-in methods as much as possible.</summary>
- <p>
- sort()
- reduce()
- map()
- etc
- </p>
-</details>
-
-<details>
- <summary>Reduce function calls.</summary>
- <p>
-  
- ```python
- import time
- x = 0
- def doit1(i):
-     global x
-     x = x + i
-
- list = range(100000)
- t = time.time()
- for i in list:
-     doit1(i)
-
- print "%.3f" % (time.time()-t)
- ```
- vs.
- ```python
- import time
- x = 0
- def doit2(list):
-     global x
-     for i in list:
-         x = x + i
-
- list = range(100000)
- t = time.time()
- doit2(list)
- ```
- </p>
- </details>
-
-<details>
- <summary>Profile application. Especially after changing code.</summary>
- <p>
-  
-  ```bash
-  $ python3.9 -m cProfile wiki/general/import_modules.py | awk 'NR<8 || /import_modules/'
-  Check for a standard function call: 235.19015312194824 ms
-  Check for a standard function call: 0.0026226043701171875 ms
-         155065 function calls (149795 primitive calls) in 0.235 seconds
-
-   Ordered by: standard name
-
-   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    0.236    0.236 import_modules.py:1(<module>)
-        2    0.000    0.000    0.235    0.118 import_modules.py:9(import_check)
-
-  ```
- </p>
-</details>
+       ```bash
+       $ python3.9 -m cProfile wiki/general/import_modules.py | awk 'NR<8 || /import_modules/'
+       Check for a standard function call: 235.19015312194824 ms
+       Check for a standard function call: 0.0026226043701171875 ms
+              155065 function calls (149795 primitive calls) in 0.235 seconds
+        Ordered by: standard name
+        ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+             1    0.000    0.000    0.236    0.236 import_modules.py:1(<module>)
+             2    0.000    0.000    0.235    0.118 import_modules.py:9(import_check)
+       ```
+      </p>
+    - Run static code analysis.
+ 
+ - [Zen 🧘](wiki/general/zen.py).
 
 ## Loops
+ - In python 2.7, <code>range()</code> VS <code>xrange()</code>. <br>
+<code>range()</code> computes all the values before iteration. <br>
+<code>xrange()</code> does lazy evaluation i.e. computes values during iteration.
+ - <a href="wiki/loops/loops_vs_list_comprehension_vs_map.py">for loops VS list comprehension VS <code>map()</code>
+</a>
+ - Avoiding dots in loops i.e member resolution.
 
-<details>
- <summary>Replace <code>range()</code> with <code>xrange()</code>.</summary>
- <p>
- `range()` loads all the numbers in memory, whereas `xrange()` returns a generator that lazily loads the next number when needed.
-   ```python
-   lol = 1243
-   pop = 1323
-   ```
- </p>
-</details>
+ - Use local variables for loops instead of referring to global variables.
 
-<details>
- <summary>Use <code>map()</code> instead of loops.</summary>
- <p>
-  To use c compiled code instead of interpreted code.
- </p>
-</details>
-
-<details>
- <summary>Avoiding dots in loops i.e member resolution.</summary>
- <p>
- </p>
-</details>
-
-<details>
- <summary>Use local variables for loops instead of referring to global variables.</summary>
- <p>
- </p>
-</details>
-
-<details>
- <summary>Use list comprehension instead of loops.</summary>
- <p>
-  
-  
-  ```python
-   @time_it
-   def square_numbers_using_for_loop(numbers: list) -> list:
-       squared_numbers = list()
-       for number in numbers:
-           squared_numbers.append(number * number)
-           return squared_numbers
-
-
-   @time_it
-   def square_numbers_using_list_comprehension(numbers: list) -> list:
-       return [number * number for number in numbers]
-   ```
- </p>
-</details>
 
 ## Collections
+ - While creating a collection of objects, <b> consider using [generators](wiki/loops/generator.py) as opposed to collections </b>, especially when the objects aren't 
+   expensive to generate.<br>
+    <pre>
+    As when using a collection like a list or set, all the elements need to be generated and stored in memory.
+    Whereas, a generator lazily generates elements only when the iteration needs it.
+    </pre>
 
-<details>
- <summary>While generating data, consider using generators as opposed to collections.</summary>
- <p>
-  As when using a collection like a list or set, all the elements need to be generated and stored in memory.
-  Whereas, a generator lazily generates elements only when the iteration needs it
- </p>
-</details>
+ - Initializing dict values, use <code>get()</code> with default value.
 
-<details>
- <summary>Initializing dict values, use <code>get()</code> with default value.</summary>
- <p>
- </p>
-</details>
+ - Use sets when intersections and unions are needed.
 
-<details>
- <summary>Use sets when intersections and unions are needed.</summary>
- <p>
- </p>
-</details>
-
-## Strings
-
-<details>
- <summary>Use <code>join()</code> for string concatenation instead of <code>+</code>.</summary>
- <p>
- </p>
-</details>
 
 ## Conditions
+ - [Use <code>in</code>](wiki/conditions/in_keyword.py).
+ - [Short circuiting VS Regular logical operators](wiki/conditions/logical_operators.py#36).
 
-<details>
- <summary>Use <code>in</code>.</summary>
- <p>
- </p>
-</details>
-
-<details>
- <summary>Prefer checking a long list as opposed to constructing a set.</summary>
- <p>
-  
-   ```python
-   if animal in set(animals):
-
-   if animal in animals:
-   ```
- </p>
-</details>
-
+## Testing
+ - Keep assertions as specific as possible.
 
 ## References
 [1] https://stackify.com/20-simple-python-performance-tuning-tips/ <br>
 [2] https://wiki.python.org/moin/PythonSpeed/PerformanceTips
+[3] https://www.python.org/dev/peps/pep-0020/
