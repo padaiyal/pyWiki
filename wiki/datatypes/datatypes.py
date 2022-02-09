@@ -145,4 +145,10 @@ for key, value in dict5.items():
     print(f"{key}: f{value}")
 
 
+# Setting/Getting default value if it doesn't exist.
+if "key99" not in dict5:
+    dict5["key99"] = 99
+
+dict5["key99"] = dict5.get("key99", default=99)
+
 # TODO: set, tuple, frozenset

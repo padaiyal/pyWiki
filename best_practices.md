@@ -14,23 +14,25 @@
      <li> <a href="#collections">Collections</a> </li>
      <li> <a href="#strings">Strings</a> </li>
      <li> <a href="#conditions">Conditions</a> </li>
+     <li> <a href="#testing">Testing</a> </li>
   </ol>
 </details>
 
 ## General
- - <a href="wiki/general/fail_fast.py">Fail fast.</a>
+ - #### <a href="wiki/general/fail_fast.py">Fail fast.</a>
 
- - <a href="wiki/general/lru_cache.py">Cache functions via decorator.</a>
+ - #### Prefer built-in methods and keywords unless performance gain is worth the effort. 
+    Eg: <code>sort()</code>,
+    <code>reduce()</code>,
+    <code>map()</code>
+    etc.
 
- - Prefer built-in methods and keywords unless performance gain is worth the effort. Eg: <code>sort()</code>,
- <code>reduce()</code>,
- <code>map()</code>
- etc.
-
- - After code changes:
-    - <details>Run unit tests.</details>
-    - Test code coverage.
-    - Profile application performance before and after the change.
+ - #### <a href="wiki/general/lru_cache.py">Cache predictable functions via decorator.</a>
+ 
+ - #### After code changes:
+    - #### Run unit tests.
+    - #### Test code coverage.
+    - #### Profile application performance.
       <p>
 
        ```bash
@@ -44,40 +46,40 @@
              2    0.000    0.000    0.235    0.118 import_modules.py:9(import_check)
        ```
       </p>
-    - Run static code analysis.
+    - #### Run static code analysis.
  
- - [Zen 🧘](wiki/general/zen.py).
+ - #### [Zen 🧘](wiki/general/zen.py).
 
 ## Loops
- - In python 2.7, <code>range()</code> VS <code>xrange()</code>. <br>
-<code>range()</code> computes all the values before iteration. <br>
-<code>xrange()</code> does lazy evaluation i.e. computes values during iteration.
- - <a href="wiki/loops/loops_vs_list_comprehension_vs_map.py">for loops VS list comprehension VS <code>map()</code>
-</a>
- - Avoiding dots in loops i.e member resolution.
-
- - Use local variables for loops instead of referring to global variables.
+ - #### In python 2.7, <code>range()</code> VS <code>xrange()</code>. <br>
+    <code>range()</code> computes all the values before iteration. <br>
+    <code>xrange()</code> does lazy evaluation i.e. computes values during iteration.
+ - #### <a href="wiki/loops/loops_vs_list_comprehension_vs_map.py">for loops VS list comprehension VS <code>map()</code></a>
+ - #### Use local variables for loops instead of referring to global variables or dot resolution.
+   - To use the same value throughout the iterations.
+   - A small performance gain when the number of iterations is very large.
 
 
 ## Collections
- - While creating a collection of objects, <b> consider using [generators](wiki/loops/generator.py) as opposed to collections </b>, especially when the objects aren't 
+ - #### Lazy evaluation
+   While creating a collection of objects, <b> consider using [generators](wiki/loops/generator.py) as opposed to collections </b>, especially when the objects aren't 
    expensive to generate.<br>
     <pre>
     As when using a collection like a list or set, all the elements need to be generated and stored in memory.
     Whereas, a generator lazily generates elements only when the iteration needs it.
     </pre>
 
- - Initializing dict values, use <code>get()</code> with default value.
+ - #### [While initializing dict values, use <code>get()</code> with default value.](wiki/datatypes/datatypes.py#148)
 
- - Use sets when intersections and unions are needed.
+ - #### Use sets when intersections and unions are needed.
 
 
 ## Conditions
- - [Use <code>in</code>](wiki/conditions/in_keyword.py).
- - [Short circuiting VS Regular logical operators](wiki/conditions/logical_operators.py#36).
+ - #### [Use <code>in</code>](wiki/conditions/in_keyword.py).
+ - #### [Short circuiting VS Regular logical operators](wiki/conditions/logical_operators.py#36).
 
 ## Testing
- - Keep assertions as specific as possible.
+ - #### [Keep assertions as specific as possible](wiki/unit_tests/even_number_test.py#57).
 
 ## References
 [1] https://stackify.com/20-simple-python-performance-tuning-tips/ <br>
