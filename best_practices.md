@@ -12,7 +12,6 @@
      <li> <a href="#general">General</a> </li>
      <li> <a href="#loops">Loops</a> </li>
      <li> <a href="#collections">Collections</a> </li>
-     <li> <a href="#strings">Strings</a> </li>
      <li> <a href="#conditions">Conditions</a> </li>
      <li> <a href="#testing">Testing</a> </li>
   </ol>
@@ -83,5 +82,6 @@
 
 ## References
 [1] https://stackify.com/20-simple-python-performance-tuning-tips/ <br>
-[2] https://wiki.python.org/moin/PythonSpeed/PerformanceTips
-[3] https://www.python.org/dev/peps/pep-0020/
+[2] https://wiki.python.org/moin/PythonSpeed/PerformanceTips <br>
+[3] https://www.python.org/dev/peps/pep-0020/ <br>
+[4] https://docs.quantifiedcode.com/python-anti-patterns/correctness/not_using_get_to_return_a_default_value_from_a_dictionary.html#
