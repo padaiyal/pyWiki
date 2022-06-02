@@ -1,5 +1,22 @@
 from wiki.general.classes import Car
 
+"""
+Objectives:
+PCPP-32-101 1.1 – Understand and explain the basic terms and
+programming concepts used in the OOP paradigm
+ - essential terminology: class, instance, object, attribute, method, type,
+instance and class variables, superclasses and subclasses
+ - reflexion: isinstance(), issubclass()
+ - the __init__() method
+ - creating classes, methods, and class and instance variables; calling
+methods; accessing class and instance variables
+
+PCPP-32-101 1.3 Understand and use the concepts of inheritance,
+polymorphism, and composition
+ - duck typing
+ - inheritance vs. composition
+ - modelling real-life problems using the "is a" and "has a" relations
+"""
 
 class Lamborghini(Car):
 
@@ -57,6 +74,19 @@ if __name__ == '__main__':
     # aventador.set_speed_in_kmph(150)
 
     lamborghini.set_speed_in_kmph(100)
+
+    # isinstance()
+    print("aventador isinstance Aventador: ", isinstance(aventador, Aventador))
+    print("aventador isinstance Lamborghini: ", isinstance(aventador, Lamborghini))
+    print("lamborghini isinstance Aventador: ", isinstance(lamborghini, Aventador))
+
+    # issubclass()
+    print("Aventador issubclass Lamborghini: ", issubclass(Aventador, Lamborghini))
+    print("Lamborghini issubclass Aventador: ", issubclass(Lamborghini, Aventador))
+    print("Aventador issubclass Car: ", issubclass(Aventador, Car))
+    print("Lamborghini issubclass Car: ", issubclass(Lamborghini, Car))
+    print("Car issubclass Lamborghini: ", issubclass(Car, Lamborghini))
+    print("Car issubclass Aventador: ", issubclass(Car, Aventador))
 
     # TODO: Try coming up with a multiple inheritance hierarchy. What happens if two of the parent classes contain a
     #  method with the same name or a variable with the same name?
